@@ -1,0 +1,8 @@
+---
+TagFormat: v(?P<major>[0-9]+)\.(?P<minor>[0-9]+)\.(?P<patch>[0-9]+)-flannel(?<hotfix>[0-9]+)
+Comparator: 0
+BranchTemplate: feature/${major}.${minor}.${patch}-${hotfix}
+MasterBranchTemplate: oracle/release/${major}.${minor}.${patch}-${hotfix}
+TemplateDirectory: v${major}.${minor}
+SemverTagFilter: "> 1.7.0-0"
+TagSemverFormat: v${major}.${minor}.${patch}-${hotfix}
