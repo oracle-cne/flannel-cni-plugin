@@ -38,7 +38,8 @@ go mod vendor
 scripts/build_flannel.sh
 export GO_BUILD_FLAGS="-trimpath=false"
 source ./scripts/version.sh
-cp ${OUTPUT_DIR}/flannel* dist/
+#cp ${OUTPUT_DIR}/flannel* dist/
+ls -lrt dist/
 
 %install
 install -m 755 -d %{buildroot}/opt/cni/bin
