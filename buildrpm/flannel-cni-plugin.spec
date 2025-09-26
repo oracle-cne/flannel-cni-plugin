@@ -36,6 +36,7 @@ chmod +x scripts/build_flannel.sh
 go mod tidy
 go mod vendor
 scripts/build_flannel.sh
+export GO_BUILD_FLAGS="-trimpath=false"
 source ./scripts/version.sh
 cp ${OUTPUT_DIR}/flannel* dist/
 
