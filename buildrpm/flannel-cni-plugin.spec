@@ -39,7 +39,6 @@ export GO_BUILD_FLAGS="-trimpath=false"
 export VERSION="v%{version}"
 scripts/build_flannel.sh
 source ./scripts/version.sh
-cp ${OUTPUT_DIR}/flannel* dist/
 
 %install
 install -m 755 -d %{buildroot}/opt/cni/bin
