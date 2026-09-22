@@ -2,9 +2,10 @@
 import com.oracle.olcne.pipeline.BranchPattern
 
 String version = "1.9.1";
+String release =  "3"
 
 olcnePipeline(
-    branchPattern: new BranchPattern(master: "oracle/release/" + version, feature: '(?!^release/.*$)(^.*$)'),
+    branchPattern: new BranchPattern(master: "oracle/release/" + version + "-" + release, feature: '(?!^release/.*$)(^.*$)'),
     customStages: [container: [enabled: false]],
     platforms: ['ol8', 'ol9'],
     architectures: ['x86_64', 'aarch64'],
