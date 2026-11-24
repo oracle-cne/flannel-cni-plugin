@@ -11,7 +11,7 @@
 
 Name:           flannel-cni-plugin
 Version:        1.10.0
-Release:        1%{dist}
+Release:        2%{dist}
 Summary:        This plugin is designed to work in conjunction with flannel, a network fabric for containers.
 Vendor:         Oracle America
 License:        Apache-2.0
@@ -49,5 +49,8 @@ cp dist/flannel* %{buildroot}/opt/cni/bin/flannel
 /opt/cni/bin
 
 %changelog
+* Tue Nov 24 2026 Oracle Cloud Native Environment Authors <noreply@oracle.com> - 1.10.0-2
+- Refresh Go dependencies and update the CNI test plugins to v1.10.0
+
 * Fri Nov 20 2026 Oracle Cloud Native Environment Authors <noreply@oracle.com> - 1.10.0-1
 - Added Oracle specific build files for Flannel CNI Plugins
